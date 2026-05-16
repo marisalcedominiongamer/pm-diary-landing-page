@@ -1,0 +1,418 @@
+# ─────────────────────────────────────────────────────────────
+#  PM Diary — Decap CMS Config
+#  Panel: tu-sitio.vercel.app/admin
+#  Edita aquí los campos que aparecen en el panel visual.
+#  NO toques la estructura de keys — solo labels y hint si quieres.
+# ─────────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway
+  repo: marisalcedominiongamer/pm-diary-landing-page   # ← cambia TU_USUARIO por tu usuario real de GitHub
+  branch: main
+
+# Carpeta donde se guardan las imágenes subidas desde el panel
+media_folder: images
+public_folder: /images
+
+# El panel edita un único archivo JSON (no Markdown)
+collections:
+
+  # ── 1. SITE META ──────────────────────────────────────────
+  - name: site
+    label: "🌐 Site — Meta y SEO"
+    files:
+      - name: site
+        label: "Meta del sitio"
+        file: content.json
+        fields:
+          - label: "Título del sitio (pestaña del browser)"
+            name: site.title
+            widget: string
+            hint: "Aparece en la pestaña del navegador y en Google"
+
+          - label: "Descripción SEO"
+            name: site.description
+            widget: text
+            hint: "Descripción que ve Google bajo el título en resultados de búsqueda"
+
+          - label: "Tema por defecto"
+            name: site.default_theme
+            widget: select
+            options: [bloom, forest, aurora, glacier]
+            hint: "Tema que carga la primera vez que alguien visita la landing"
+
+  # ── 2. NAV ────────────────────────────────────────────────
+  - name: nav
+    label: "🔗 Navegación"
+    files:
+      - name: nav
+        label: "Menú superior"
+        file: content.json
+        fields:
+          - label: "Logo — texto principal"
+            name: nav.logo_text
+            widget: string
+
+          - label: "Logo — subtexto"
+            name: nav.logo_sub
+            widget: string
+
+          - label: "Enlace 1 — texto"
+            name: nav.link_1_text
+            widget: string
+
+          - label: "Enlace 1 — destino"
+            name: nav.link_1_href
+            widget: string
+            hint: "Usa #id para anclas internas o /pagina.html para páginas"
+
+          - label: "Enlace 2 — texto"
+            name: nav.link_2_text
+            widget: string
+
+          - label: "Enlace 2 — destino"
+            name: nav.link_2_href
+            widget: string
+
+          - label: "Botón CTA — texto"
+            name: nav.cta_text
+            widget: string
+
+          - label: "Botón CTA — destino"
+            name: nav.cta_href
+            widget: string
+
+  # ── 3. HERO ───────────────────────────────────────────────
+  - name: hero
+    label: "🚀 Hero — Sección principal"
+    files:
+      - name: hero
+        label: "Textos del hero"
+        file: content.json
+        fields:
+          - label: "Badge (etiqueta animada)"
+            name: hero.badge
+            widget: string
+            hint: "El texto del badge con punto parpadeante arriba del título"
+
+          - label: "Título — línea 1"
+            name: hero.title_line1
+            widget: string
+
+          - label: "Título — línea 2"
+            name: hero.title_line2
+            widget: string
+
+          - label: "Título — texto destacado (degradado)"
+            name: hero.title_highlight
+            widget: string
+            hint: "Esta parte aparece con el color degradado del tema"
+
+          - label: "Subtítulo"
+            name: hero.subtitle
+            widget: text
+            hint: "Párrafo debajo del título principal"
+
+          - label: "Botón primario — texto"
+            name: hero.cta_primary_text
+            widget: string
+
+          - label: "Botón primario — destino"
+            name: hero.cta_primary_href
+            widget: string
+
+          - label: "Botón secundario — texto"
+            name: hero.cta_ghost_text
+            widget: string
+
+          - label: "Botón secundario — destino"
+            name: hero.cta_ghost_href
+            widget: string
+
+          - label: "Nota debajo de botones"
+            name: hero.note
+            widget: string
+            hint: "Texto pequeño de tranquilidad: 'Sin tarjeta · Gratis · etc'"
+
+  # ── 4. MOCKUP ─────────────────────────────────────────────
+  - name: mockup
+    label: "🖥️ Mockup — Dashboard ilustrativo"
+    files:
+      - name: mockup
+        label: "Contenido del mockup"
+        file: content.json
+        fields:
+          - label: "Saludo"
+            name: mockup.greeting
+            widget: string
+            hint: "Ej: Buenos días ✦"
+
+          - label: "Progreso de tareas"
+            name: mockup.tasks_progress
+            widget: string
+            hint: "Ej: 3/5 completadas"
+
+          - label: "Cita inspiracional del banner"
+            name: mockup.banner_quote
+            widget: text
+            hint: "La frase en cursiva dentro del mockup"
+
+          - label: "Estadística 1 — número"
+            name: mockup.stat_1_number
+            widget: string
+
+          - label: "Estadística 1 — etiqueta"
+            name: mockup.stat_1_label
+            widget: string
+
+          - label: "Estadística 2 — número"
+            name: mockup.stat_2_number
+            widget: string
+
+          - label: "Estadística 2 — etiqueta"
+            name: mockup.stat_2_label
+            widget: string
+
+          - label: "Estadística 3 — número"
+            name: mockup.stat_3_number
+            widget: string
+
+          - label: "Estadística 3 — etiqueta"
+            name: mockup.stat_3_label
+            widget: string
+
+          - label: "Etiqueta del gráfico"
+            name: mockup.chart_label
+            widget: string
+
+          - label: "Badge urgentes"
+            name: mockup.badge_urgent
+            widget: string
+            hint: "Ej: ⚠ 2 urgentes"
+
+          - label: "Badge FODA"
+            name: mockup.badge_foda
+            widget: string
+            hint: "Ej: ✓ FODA generado"
+
+  # ── 5. PROOF ──────────────────────────────────────────────
+  - name: proof
+    label: "👥 Social Proof"
+    files:
+      - name: proof
+        label: "Sección de prueba social"
+        file: content.json
+        fields:
+          - label: "Etiqueta superior"
+            name: proof.label
+            widget: string
+            hint: "Texto en mayúsculas sobre los avatares"
+
+          - label: "Texto principal"
+            name: proof.text
+            widget: string
+
+          - label: "Texto en negrita"
+            name: proof.text_strong
+            widget: string
+            hint: "Esta parte aparece en negrita y color del tema"
+
+  # ── 6. PILLARS — sección ──────────────────────────────────
+  - name: pillars_section
+    label: "✦ Para quién — Encabezado"
+    files:
+      - name: pillars_section
+        label: "Encabezado de la sección"
+        file: content.json
+        fields:
+          - label: "Tag (etiqueta pequeña)"
+            name: pillars_section.tag
+            widget: string
+
+          - label: "Título"
+            name: pillars_section.title
+            widget: string
+
+          - label: "Subtítulo"
+            name: pillars_section.subtitle
+            widget: text
+
+  # ── 7. PILLARS — 4 tarjetas ───────────────────────────────
+  - name: pillars
+    label: "✦ Para quién — Tarjetas (4)"
+    files:
+      - name: pillar_1
+        label: "Tarjeta 1"
+        file: content.json
+        fields:
+          - label: "Ícono"
+            name: "pillars[0].icon"
+            widget: string
+            hint: "Emoji o símbolo. Ej: ✦ 🏆 🌿 ◎"
+          - label: "Título"
+            name: "pillars[0].title"
+            widget: string
+          - label: "Descripción"
+            name: "pillars[0].desc"
+            widget: text
+
+      - name: pillar_2
+        label: "Tarjeta 2"
+        file: content.json
+        fields:
+          - label: "Ícono"
+            name: "pillars[1].icon"
+            widget: string
+          - label: "Título"
+            name: "pillars[1].title"
+            widget: string
+          - label: "Descripción"
+            name: "pillars[1].desc"
+            widget: text
+
+      - name: pillar_3
+        label: "Tarjeta 3"
+        file: content.json
+        fields:
+          - label: "Ícono"
+            name: "pillars[2].icon"
+            widget: string
+          - label: "Título"
+            name: "pillars[2].title"
+            widget: string
+          - label: "Descripción"
+            name: "pillars[2].desc"
+            widget: text
+
+      - name: pillar_4
+        label: "Tarjeta 4"
+        file: content.json
+        fields:
+          - label: "Ícono"
+            name: "pillars[3].icon"
+            widget: string
+          - label: "Título"
+            name: "pillars[3].title"
+            widget: string
+          - label: "Descripción"
+            name: "pillars[3].desc"
+            widget: text
+
+  # ── 8. QUOTE ──────────────────────────────────────────────
+  - name: quote
+    label: "💬 Cita destacada"
+    files:
+      - name: quote
+        label: "Bloque de cita"
+        file: content.json
+        fields:
+          - label: "Cita principal"
+            name: quote.text
+            widget: text
+            hint: "Puedes usar <br/> para forzar salto de línea"
+
+          - label: "Subtexto de la cita"
+            name: quote.sub
+            widget: text
+
+  # ── 9. THEMES SECTION ─────────────────────────────────────
+  - name: themes_section
+    label: "🎨 Temas — Encabezado"
+    files:
+      - name: themes_section
+        label: "Encabezado sección de temas"
+        file: content.json
+        fields:
+          - label: "Tag"
+            name: themes_section.tag
+            widget: string
+
+          - label: "Título"
+            name: themes_section.title
+            widget: string
+
+          - label: "Subtítulo"
+            name: themes_section.subtitle
+            widget: text
+
+  # ── 10. BETA ──────────────────────────────────────────────
+  - name: beta
+    label: "⚡ Beta — Formulario de acceso"
+    files:
+      - name: beta
+        label: "Sección de registro beta"
+        file: content.json
+        fields:
+          - label: "Título"
+            name: beta.title
+            widget: string
+
+          - label: "Subtítulo"
+            name: beta.subtitle
+            widget: text
+
+          - label: "Placeholder — campo nombre"
+            name: beta.placeholder_name
+            widget: string
+
+          - label: "Placeholder — campo email"
+            name: beta.placeholder_email
+            widget: string
+
+          - label: "Placeholder — selector de rol"
+            name: beta.placeholder_role
+            widget: string
+
+          - label: "Texto del botón de envío"
+            name: beta.btn_text
+            widget: string
+
+          - label: "Nota — texto"
+            name: beta.note_text
+            widget: string
+
+          - label: "Nota — texto del enlace"
+            name: beta.note_link_text
+            widget: string
+
+          - label: "Nota — destino del enlace"
+            name: beta.note_link_href
+            widget: string
+
+          - label: "Éxito — título"
+            name: beta.success_title
+            widget: string
+            hint: "Aparece cuando el usuario envía el formulario"
+
+          - label: "Éxito — subtítulo"
+            name: beta.success_sub
+            widget: text
+
+          - label: "Éxito — texto del botón"
+            name: beta.success_btn_text
+            widget: string
+
+          - label: "Éxito — destino del botón"
+            name: beta.success_btn_href
+            widget: string
+
+  # ── 11. FOOTER ────────────────────────────────────────────
+  - name: footer
+    label: "🔻 Footer"
+    files:
+      - name: footer
+        label: "Pie de página"
+        file: content.json
+        fields:
+          - label: "Logo texto"
+            name: footer.logo
+            widget: string
+
+          - label: "Subtexto"
+            name: footer.sub
+            widget: string
+
+          - label: "Copyright"
+            name: footer.copy
+            widget: string
+            hint: "Ej: © 2026 PM Diary · Hecho con ◈ para Project Managers"
