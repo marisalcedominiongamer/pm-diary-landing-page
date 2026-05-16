@@ -1,0 +1,15 @@
+{
+    "title": "Acceso Beta gratuito",
+    "subtitle": "Sin tarjeta de crédito · Sin límites · Durante la beta, PM Diary es completamente gratuito. Entra, organiza y cuéntanos qué mejorar.",
+    "placeholder_name": "Tu nombre",
+    "placeholder_email": "Tu correo profesional",
+    "placeholder_role": "Tu nivel actual como PM",
+    "btn_text": "Solicitar acceso →",
+    "note_text": "O entra directamente →",
+    "note_link_text": "Continuar con Google",
+    "note_link_href": "https://pm-diaryv1.vercel.app/login.html",
+    "success_title": "¡Solicitud enviada!",
+    "success_sub": "Te contactamos pronto. Mientras tanto puedes entrar ahora con Google.",
+    "success_btn_text": "Entrar ahora →",
+    "success_btn_href": "https://pm-diaryv1.vercel.app/login.html"
+}

@@ -1,0 +1,14 @@
+{
+    "greeting": "Buenos días ✦",
+    "tasks_progress": "3/5 completadas",
+    "banner_quote": "\"Coordinaste personas, decisiones y expectativas hoy. Eso es liderazgo.\" ↻",
+    "stat_1_number": "5",
+    "stat_1_label": "Total tareas",
+    "stat_2_number": "2",
+    "stat_2_label": "Urgentes",
+    "stat_3_number": "4",
+    "stat_3_label": "Equipo",
+    "chart_label": "Semana actual",
+    "badge_urgent": "⚠ 2 urgentes",
+    "badge_foda": "✓ FODA generado"
+}

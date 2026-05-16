@@ -21,162 +21,117 @@ collections:
 
       - name: "site"
         label: "🌐 Site — Meta y SEO"
-        file: "content.json"
+        file: "content/site.json"
         fields:
-          - name: site
-            label: Site
-            widget: object
-            fields:
-              - { name: title,         label: "Título del sitio", widget: string }
-              - { name: description,   label: "Descripción SEO", widget: text }
-              - { name: default_theme, label: "Tema por defecto", widget: select, options: [bloom, forest, aurora, glacier] }
+          - { name: title,         label: "Título del sitio", widget: string }
+          - { name: description,   label: "Descripción SEO", widget: text }
+          - { name: default_theme, label: "Tema por defecto", widget: select, options: [bloom, forest, aurora, glacier] }
 
       - name: "nav"
         label: "🔗 Navegación"
-        file: "content.json"
+        file: "content/nav.json"
         fields:
-          - name: nav
-            label: Navegación
-            widget: object
-            fields:
-              - { name: logo_text,   label: "Logo — texto", widget: string }
-              - { name: logo_sub,    label: "Logo — subtexto", widget: string }
-              - { name: link_1_text, label: "Enlace 1 — texto", widget: string }
-              - { name: link_1_href, label: "Enlace 1 — destino", widget: string }
-              - { name: link_2_text, label: "Enlace 2 — texto", widget: string }
-              - { name: link_2_href, label: "Enlace 2 — destino", widget: string }
-              - { name: cta_text,    label: "Botón CTA — texto", widget: string }
-              - { name: cta_href,    label: "Botón CTA — destino", widget: string }
+          - { name: logo_text,   label: "Logo — texto", widget: string }
+          - { name: logo_sub,    label: "Logo — subtexto", widget: string }
+          - { name: link_1_text, label: "Enlace 1 — texto", widget: string }
+          - { name: link_1_href, label: "Enlace 1 — destino", widget: string }
+          - { name: link_2_text, label: "Enlace 2 — texto", widget: string }
+          - { name: link_2_href, label: "Enlace 2 — destino", widget: string }
+          - { name: cta_text,    label: "Botón CTA — texto", widget: string }
+          - { name: cta_href,    label: "Botón CTA — destino", widget: string }
 
       - name: "hero"
         label: "🚀 Hero — Sección principal"
-        file: "content.json"
+        file: "content/hero.json"
         fields:
-          - name: hero
-            label: Hero
-            widget: object
-            fields:
-              - { name: badge,            label: "Badge animado", widget: string }
-              - { name: title_line1,      label: "Título — línea 1", widget: string }
-              - { name: title_line2,      label: "Título — línea 2", widget: string }
-              - { name: title_highlight,  label: "Título — texto degradado", widget: string }
-              - { name: subtitle,         label: "Subtítulo", widget: text }
-              - { name: cta_primary_text, label: "Botón primario — texto", widget: string }
-              - { name: cta_primary_href, label: "Botón primario — destino", widget: string }
-              - { name: cta_ghost_text,   label: "Botón secundario — texto", widget: string }
-              - { name: cta_ghost_href,   label: "Botón secundario — destino", widget: string }
-              - { name: note,             label: "Nota debajo de botones", widget: string }
+          - { name: badge,            label: "Badge animado", widget: string }
+          - { name: title_line1,      label: "Título — línea 1", widget: string }
+          - { name: title_line2,      label: "Título — línea 2", widget: string }
+          - { name: title_highlight,  label: "Título — texto degradado", widget: string }
+          - { name: subtitle,         label: "Subtítulo", widget: text }
+          - { name: cta_primary_text, label: "Botón primario — texto", widget: string }
+          - { name: cta_primary_href, label: "Botón primario — destino", widget: string }
+          - { name: cta_ghost_text,   label: "Botón secundario — texto", widget: string }
+          - { name: cta_ghost_href,   label: "Botón secundario — destino", widget: string }
+          - { name: note,             label: "Nota debajo de botones", widget: string }
 
       - name: "mockup"
         label: "🖥️ Mockup — Dashboard"
-        file: "content.json"
+        file: "content/mockup.json"
         fields:
-          - name: mockup
-            label: Mockup
-            widget: object
-            fields:
-              - { name: greeting,       label: "Saludo", widget: string }
-              - { name: tasks_progress, label: "Progreso de tareas", widget: string }
-              - { name: banner_quote,   label: "Cita del banner", widget: text }
-              - { name: stat_1_number,  label: "Stat 1 — número", widget: string }
-              - { name: stat_1_label,   label: "Stat 1 — etiqueta", widget: string }
-              - { name: stat_2_number,  label: "Stat 2 — número", widget: string }
-              - { name: stat_2_label,   label: "Stat 2 — etiqueta", widget: string }
-              - { name: stat_3_number,  label: "Stat 3 — número", widget: string }
-              - { name: stat_3_label,   label: "Stat 3 — etiqueta", widget: string }
-              - { name: chart_label,    label: "Etiqueta del gráfico", widget: string }
-              - { name: badge_urgent,   label: "Badge urgentes", widget: string }
-              - { name: badge_foda,     label: "Badge FODA", widget: string }
+          - { name: greeting,       label: "Saludo", widget: string }
+          - { name: tasks_progress, label: "Progreso de tareas", widget: string }
+          - { name: banner_quote,   label: "Cita del banner", widget: text }
+          - { name: stat_1_number,  label: "Stat 1 — número", widget: string }
+          - { name: stat_1_label,   label: "Stat 1 — etiqueta", widget: string }
+          - { name: stat_2_number,  label: "Stat 2 — número", widget: string }
+          - { name: stat_2_label,   label: "Stat 2 — etiqueta", widget: string }
+          - { name: stat_3_number,  label: "Stat 3 — número", widget: string }
+          - { name: stat_3_label,   label: "Stat 3 — etiqueta", widget: string }
+          - { name: chart_label,    label: "Etiqueta del gráfico", widget: string }
+          - { name: badge_urgent,   label: "Badge urgentes", widget: string }
+          - { name: badge_foda,     label: "Badge FODA", widget: string }
 
       - name: "proof"
         label: "👥 Social Proof"
-        file: "content.json"
+        file: "content/proof.json"
         fields:
-          - name: proof
-            label: Proof
-            widget: object
-            fields:
-              - { name: label,       label: "Etiqueta superior", widget: string }
-              - { name: text,        label: "Texto principal", widget: string }
-              - { name: text_strong, label: "Texto en negrita", widget: string }
-
-      - name: "pillars_section"
-        label: "✦ Para quién — Encabezado"
-        file: "content.json"
-        fields:
-          - name: pillars_section
-            label: Encabezado
-            widget: object
-            fields:
-              - { name: tag,      label: "Tag", widget: string }
-              - { name: title,    label: "Título", widget: string }
-              - { name: subtitle, label: "Subtítulo", widget: text }
+          - { name: label,       label: "Etiqueta superior", widget: string }
+          - { name: text,        label: "Texto principal", widget: string }
+          - { name: text_strong, label: "Texto en negrita", widget: string }
 
       - name: "pillars"
-        label: "✦ Para quién — Tarjetas (4)"
-        file: "content.json"
+        label: "✦ Para quién"
+        file: "content/pillars.json"
         fields:
-          - name: pillars
-            label: Tarjetas
+          - { name: tag,      label: "Tag", widget: string }
+          - { name: title,    label: "Título", widget: string }
+          - { name: subtitle, label: "Subtítulo", widget: text }
+          - name: items
+            label: "Tarjetas (4)"
             widget: list
             fields:
-              - { name: icon,  label: "Ícono", widget: string }
+              - { name: icon,  label: "Ícono", widget: string, hint: "Emoji: ✦ 🏆 🌿 ◎" }
               - { name: title, label: "Título", widget: string }
               - { name: desc,  label: "Descripción", widget: text }
 
       - name: "quote"
         label: "💬 Cita destacada"
-        file: "content.json"
+        file: "content/quote.json"
         fields:
-          - name: quote
-            label: Cita
-            widget: object
-            fields:
-              - { name: text, label: "Cita principal", widget: text }
-              - { name: sub,  label: "Subtexto", widget: text }
+          - { name: text, label: "Cita principal", widget: text }
+          - { name: sub,  label: "Subtexto", widget: text }
 
-      - name: "themes_section"
+      - name: "themes"
         label: "🎨 Temas — Encabezado"
-        file: "content.json"
+        file: "content/themes.json"
         fields:
-          - name: themes_section
-            label: Temas
-            widget: object
-            fields:
-              - { name: tag,      label: "Tag", widget: string }
-              - { name: title,    label: "Título", widget: string }
-              - { name: subtitle, label: "Subtítulo", widget: text }
+          - { name: tag,      label: "Tag", widget: string }
+          - { name: title,    label: "Título", widget: string }
+          - { name: subtitle, label: "Subtítulo", widget: text }
 
       - name: "beta"
         label: "⚡ Beta — Formulario"
-        file: "content.json"
+        file: "content/beta.json"
         fields:
-          - name: beta
-            label: Beta
-            widget: object
-            fields:
-              - { name: title,             label: "Título", widget: string }
-              - { name: subtitle,          label: "Subtítulo", widget: text }
-              - { name: placeholder_name,  label: "Placeholder nombre", widget: string }
-              - { name: placeholder_email, label: "Placeholder email", widget: string }
-              - { name: placeholder_role,  label: "Placeholder rol", widget: string }
-              - { name: btn_text,          label: "Texto del botón", widget: string }
-              - { name: note_text,         label: "Nota — texto", widget: string }
-              - { name: note_link_text,    label: "Nota — texto enlace", widget: string }
-              - { name: note_link_href,    label: "Nota — destino enlace", widget: string }
-              - { name: success_title,     label: "Éxito — título", widget: string }
-              - { name: success_sub,       label: "Éxito — subtítulo", widget: text }
-              - { name: success_btn_text,  label: "Éxito — botón texto", widget: string }
-              - { name: success_btn_href,  label: "Éxito — botón destino", widget: string }
+          - { name: title,             label: "Título", widget: string }
+          - { name: subtitle,          label: "Subtítulo", widget: text }
+          - { name: placeholder_name,  label: "Placeholder nombre", widget: string }
+          - { name: placeholder_email, label: "Placeholder email", widget: string }
+          - { name: placeholder_role,  label: "Placeholder rol", widget: string }
+          - { name: btn_text,          label: "Texto del botón", widget: string }
+          - { name: note_text,         label: "Nota — texto", widget: string }
+          - { name: note_link_text,    label: "Nota — texto enlace", widget: string }
+          - { name: note_link_href,    label: "Nota — destino enlace", widget: string }
+          - { name: success_title,     label: "Éxito — título", widget: string }
+          - { name: success_sub,       label: "Éxito — subtítulo", widget: text }
+          - { name: success_btn_text,  label: "Éxito — botón texto", widget: string }
+          - { name: success_btn_href,  label: "Éxito — botón destino", widget: string }
 
       - name: "footer"
         label: "🔻 Footer"
-        file: "content.json"
+        file: "content/footer.json"
         fields:
-          - name: footer
-            label: Footer
-            widget: object
-            fields:
-              - { name: logo, label: "Logo texto", widget: string }
-              - { name: sub,  label: "Subtexto", widget: string }
-              - { name: copy, label: "Copyright", widget: string }
+          - { name: logo, label: "Logo texto", widget: string }
+          - { name: sub,  label: "Subtexto", widget: string }
+          - { name: copy, label: "Copyright", widget: string }

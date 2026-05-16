@@ -1,0 +1,27 @@
+{
+    "tag": "Diseñado para ti",
+    "title": "Para PMs que coordinan más de lo que delegan",
+    "subtitle": "Si gestionas proyectos web, clientes, equipo técnico y diseño al mismo tiempo — PM Diary fue construido desde ese caos.",
+    "items": [
+        {
+            "icon": "✦",
+            "title": "Todo en un solo lugar",
+            "desc": "Olvida saltar entre Notion, Sheets y Trello. PM Diary concentra tu flujo de trabajo en un espacio que entiende cómo piensas como PM."
+        },
+        {
+            "icon": "◎",
+            "title": "Análisis que te conoce",
+            "desc": "Tu dashboard entiende tu semana real y te da recomendaciones personalizadas — no datos genéricos. FODA automático incluido."
+        },
+        {
+            "icon": "🏆",
+            "title": "Crece como profesional",
+            "desc": "De Trainee PM a Directora de Proyectos. PM Diary celebra tus logros y te impulsa a subir de nivel — con XP, rachas y retos diarios."
+        },
+        {
+            "icon": "🌿",
+            "title": "Tu bienestar también importa",
+            "desc": "Activa el modo Vacaciones o Descanso médico cuando lo necesites. PM Diary pausa los recordatorios y guarda tu progreso intacto."
+        }
+    ]
+}

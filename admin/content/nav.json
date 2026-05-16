@@ -1,0 +1,10 @@
+{
+    "logo_text": "PM Diary",
+    "logo_sub": "Project Manager Hub",
+    "link_1_text": "¿Para quién?",
+    "link_1_href": "#para-quien",
+    "link_2_text": "Beta",
+    "link_2_href": "#beta",
+    "cta_text": "Solicitar acceso →",
+    "cta_href": "https://pm-diaryv1.vercel.app/login.html"
+}
