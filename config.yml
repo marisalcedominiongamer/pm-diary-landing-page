@@ -7,8 +7,9 @@
 
 backend:
   name: git-gateway
-  repo: marisalcedominiongamer/pm-diary-landing-page   # ← cambia TU_USUARIO por tu usuario real de GitHub
   branch: main
+  identity_url: https://glittery-scone-60c317.netlify.app
+  gateway_url: https://glittery-scone-60c317.netlify.app/.netlify/git
 
 # Carpeta donde se guardan las imágenes subidas desde el panel
 media_folder: images
