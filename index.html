@@ -1267,18 +1267,98 @@
             });
         }
 
-        /* ── Formulario beta ── */
-        function submitBeta() {
-            const name = document.getElementById('f-name').value.trim();
-            const email = document.getElementById('f-email').value.trim();
-            if (!name) { document.getElementById('f-name').style.borderColor = '#E85050'; return; }
-            if (!email || !email.includes('@')) { document.getElementById('f-email').style.borderColor = '#E85050'; return; }
-            const role = document.getElementById('f-role').value;
-            const list = JSON.parse(localStorage.getItem('pm_beta_list') || '[]');
-            list.push({ name, email, role, theme: document.documentElement.getAttribute('data-theme'), date: new Date().toISOString() });
-            localStorage.setItem('pm_beta_list', JSON.stringify(list));
-            document.getElementById('beta-form').style.display = 'none';
-            document.getElementById('beta-success').style.display = 'block';
+        /* ── Formulario con Sheets ── */
+        const SAAS_URL = 'https://pm-diaryv1.vercel.app/login.html'; // ← cambia esto por la URL real de tu SaaS
+
+        async function submitBeta() {
+            const nameEl = document.getElementById('f-name');
+            const emailEl = document.getElementById('f-email');
+            const roleEl = document.getElementById('f-role');
+            const btnEl = document.getElementById('beta-btn');
+
+            const nombre = nameEl.value.trim();
+            const email = emailEl.value.trim();
+            const nivel_pm = roleEl.value;
+
+            // Validación
+            if (!nombre) {
+                nameEl.style.borderColor = '#E85050';
+                nameEl.focus();
+                return;
+            }
+            if (!email || !email.includes('@')) {
+                emailEl.style.borderColor = '#E85050';
+                emailEl.focus();
+                return;
+            }
+
+            // Reset estilos
+            nameEl.style.borderColor = '';
+            emailEl.style.borderColor = '';
+
+            // Estado de carga
+            btnEl.textContent = 'Enviando...';
+            btnEl.disabled = true;
+
+            try {
+                const res = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nombre,
+                        email,
+                        nivel_pm,
+                        tipo_acceso: 'formulario',
+                    }),
+                });
+
+                if (!res.ok) throw new Error('Error en el servidor');
+
+                // Guardar localmente también (respaldo)
+                const list = JSON.parse(localStorage.getItem('pm_beta_list') || '[]');
+                list.push({
+                    nombre, email, nivel_pm,
+                    tipo_acceso: 'formulario',
+                    tema: document.documentElement.getAttribute('data-theme'),
+                    fecha: new Date().toISOString(),
+                });
+                localStorage.setItem('pm_beta_list', JSON.stringify(list));
+
+                // Mostrar éxito
+                document.getElementById('beta-form').style.display = 'none';
+                document.getElementById('beta-success').style.display = 'block';
+
+                // Redirigir al SaaS después de 2 segundos
+                setTimeout(() => {
+                    window.location.href = SAAS_URL;
+                }, 2000);
+
+            } catch (err) {
+                console.error('Error al enviar:', err);
+                btnEl.textContent = 'Solicitar acceso →';
+                btnEl.disabled = false;
+                alert('Hubo un problema al enviar. Intenta de nuevo.');
+            }
+        }
+
+        // ── Google login — registra acceso y redirige ─────────────────
+        async function handleGoogleLogin() {
+            try {
+                await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nombre: 'Google User',
+                        email: 'via-google@login',
+                        nivel_pm: '',
+                        tipo_acceso: 'google',
+                    }),
+                });
+            } catch (e) {
+                // No bloquea el flujo si falla
+                console.warn('No se pudo registrar login Google:', e);
+            }
+            window.location.href = SAAS_URL;
         }
 
         /* ── Fade-in scroll ── */
