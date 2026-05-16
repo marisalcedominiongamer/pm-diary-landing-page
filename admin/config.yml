@@ -6,8 +6,8 @@
 # ─────────────────────────────────────────────────────────────
 
 backend:
-  name: github
-  repo: TU_USUARIO/pm-diary-landing   # ← cambia TU_USUARIO por tu usuario real de GitHub
+  name: git-gateway
+  repo: marisalcedominiongamer/pm-diary-landing-page   # ← cambia TU_USUARIO por tu usuario real de GitHub
   branch: main
 
 # Carpeta donde se guardan las imágenes subidas desde el panel
