@@ -6,9 +6,11 @@
 # ─────────────────────────────────────────────────────────────
 
 backend:
-  name: git-gateway
-  repo: marisalcedominiongamer/pm-diary-landing-page   # ← cambia TU_USUARIO por tu usuario real de GitHub
+  name: github
+  repo: marisalcedominiongamer/pm-diary-landing-page
   branch: main
+  base_url: https://pm-diary-landing-page.vercel.app
+  auth_endpoint: api/auth
 
 # Carpeta donde se guardan las imágenes subidas desde el panel
 media_folder: images
