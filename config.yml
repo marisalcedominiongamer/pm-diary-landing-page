@@ -9,7 +9,7 @@ backend:
   name: github
   repo: marisalcedominiongamer/pm-diary-landing-page
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://netlify-cms-github-oauth-provider-eta.vercel.app/
   auth_endpoint: auth
 
 # Carpeta donde se guardan las imágenes subidas desde el panel
