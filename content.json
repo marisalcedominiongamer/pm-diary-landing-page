@@ -12,7 +12,7 @@
         "link_2_text": "Beta",
         "link_2_href": "#beta",
         "cta_text": "Solicitar acceso →",
-        "cta_href": "/login.html"
+        "cta_href": "https://pm-diaryv1.vercel.app/login.html"
     },
     "hero": {
         "badge": "Beta abierta — acceso limitado",
@@ -23,7 +23,7 @@
         "cta_primary_text": "Únete a la Beta gratuita →",
         "cta_primary_href": "#beta",
         "cta_ghost_text": "Iniciar sesión",
-        "cta_ghost_href": "/login.html",
+        "cta_ghost_href": "https://pm-diaryv1.vercel.app/login.html",
         "note": "Sin tarjeta de crédito · Beta completamente gratuita · Cupos limitados"
     },
     "mockup": {
@@ -90,11 +90,11 @@
         "btn_text": "Solicitar acceso →",
         "note_text": "O entra directamente →",
         "note_link_text": "Continuar con Google",
-        "note_link_href": "/login.html",
+        "note_link_href": "https://pm-diaryv1.vercel.app/login.html",
         "success_title": "¡Solicitud enviada!",
         "success_sub": "Te contactamos pronto. Mientras tanto puedes entrar ahora con Google.",
         "success_btn_text": "Entrar ahora →",
-        "success_btn_href": "/login.html"
+        "success_btn_href": "https://pm-diaryv1.vercel.app/login.html"
     },
     "footer": {
         "logo": "PM Diary",
