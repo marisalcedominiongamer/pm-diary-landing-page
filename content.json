@@ -1,0 +1,104 @@
+{
+    "site": {
+        "title": "PM Diary — Tu hub como Project Manager",
+        "description": "La herramienta que los Project Managers de agencias digitales estaban esperando. Beta gratuita — acceso limitado.",
+        "default_theme": "bloom"
+    },
+    "nav": {
+        "logo_text": "PM Diary",
+        "logo_sub": "Project Manager Hub",
+        "link_1_text": "¿Para quién?",
+        "link_1_href": "#para-quien",
+        "link_2_text": "Beta",
+        "link_2_href": "#beta",
+        "cta_text": "Solicitar acceso →",
+        "cta_href": "/login.html"
+    },
+    "hero": {
+        "badge": "Beta abierta — acceso limitado",
+        "title_line1": "El hub que tu carrera",
+        "title_line2": "como PM",
+        "title_highlight": " estaba esperando",
+        "subtitle": "Organiza tu semana, coordina tu equipo y analiza tu productividad en un solo espacio — diseñado para Project Managers como tú.",
+        "cta_primary_text": "Únete a la Beta gratuita →",
+        "cta_primary_href": "#beta",
+        "cta_ghost_text": "Iniciar sesión",
+        "cta_ghost_href": "/login.html",
+        "note": "Sin tarjeta de crédito · Beta completamente gratuita · Cupos limitados"
+    },
+    "mockup": {
+        "greeting": "Buenos días ✦",
+        "tasks_progress": "3/5 completadas",
+        "banner_quote": "\"Coordinaste personas, decisiones y expectativas hoy. Eso es liderazgo.\" ↻",
+        "stat_1_number": "5",
+        "stat_1_label": "Total tareas",
+        "stat_2_number": "2",
+        "stat_2_label": "Urgentes",
+        "stat_3_number": "4",
+        "stat_3_label": "Equipo",
+        "chart_label": "Semana actual",
+        "badge_urgent": "⚠ 2 urgentes",
+        "badge_foda": "✓ FODA generado"
+    },
+    "proof": {
+        "label": "Acceso anticipado activo",
+        "text": "Project Managers de agencias digitales ya están en beta.",
+        "text_strong": "Cupos limitados."
+    },
+    "pillars_section": {
+        "tag": "Diseñado para ti",
+        "title": "Para PMs que coordinan más de lo que delegan",
+        "subtitle": "Si gestionas proyectos web, clientes, equipo técnico y diseño al mismo tiempo — PM Diary fue construido desde ese caos."
+    },
+    "pillars": [
+        {
+            "icon": "✦",
+            "title": "Todo en un solo lugar",
+            "desc": "Olvida saltar entre Notion, Sheets y Trello. PM Diary concentra tu flujo de trabajo en un espacio que entiende cómo piensas como PM."
+        },
+        {
+            "icon": "◎",
+            "title": "Análisis que te conoce",
+            "desc": "Tu dashboard entiende tu semana real y te da recomendaciones personalizadas — no datos genéricos. FODA automático incluido."
+        },
+        {
+            "icon": "🏆",
+            "title": "Crece como profesional",
+            "desc": "De Trainee PM a Directora de Proyectos. PM Diary celebra tus logros y te impulsa a subir de nivel — con XP, rachas y retos diarios."
+        },
+        {
+            "icon": "🌿",
+            "title": "Tu bienestar también importa",
+            "desc": "Activa el modo Vacaciones o Descanso médico cuando lo necesites. PM Diary pausa los recordatorios y guarda tu progreso intacto."
+        }
+    ],
+    "quote": {
+        "text": "\"El trabajo de PM no siempre se ve —<br/>pero sin ti, nada despega.\"",
+        "sub": "PM Diary existe para darte el crédito que mereces y las herramientas para seguir creciendo."
+    },
+    "themes_section": {
+        "tag": "Personalización",
+        "title": "Tu espacio, tu estilo",
+        "subtitle": "Elige el tema que va con tu energía. Cambia cuando quieras — como fondo de pantalla para tu día de trabajo."
+    },
+    "beta": {
+        "title": "Acceso Beta gratuito",
+        "subtitle": "Sin tarjeta de crédito · Sin límites · Durante la beta, PM Diary es completamente gratuito. Entra, organiza y cuéntanos qué mejorar.",
+        "placeholder_name": "Tu nombre",
+        "placeholder_email": "Tu correo profesional",
+        "placeholder_role": "Tu nivel actual como PM",
+        "btn_text": "Solicitar acceso →",
+        "note_text": "O entra directamente →",
+        "note_link_text": "Continuar con Google",
+        "note_link_href": "/login.html",
+        "success_title": "¡Solicitud enviada!",
+        "success_sub": "Te contactamos pronto. Mientras tanto puedes entrar ahora con Google.",
+        "success_btn_text": "Entrar ahora →",
+        "success_btn_href": "/login.html"
+    },
+    "footer": {
+        "logo": "PM Diary",
+        "sub": "Project Manager Hub · Beta 2026",
+        "copy": "© 2026 PM Diary · Hecho con ◈ para Project Managers"
+    }
+}

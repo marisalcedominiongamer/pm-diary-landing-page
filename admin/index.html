@@ -113,7 +113,6 @@
             transition: background .35s, color .35s;
         }
 
-        /* NAV */
         nav {
             position: fixed;
             top: 0;
@@ -216,7 +215,6 @@
             box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
         }
 
-        /* HERO */
         .hero {
             padding: 136px 24px 72px;
             text-align: center;
@@ -340,7 +338,6 @@
             color: var(--text3);
         }
 
-        /* MOCKUP */
         .mockup-wrap {
             max-width: 920px;
             margin: 52px auto 0;
@@ -503,7 +500,6 @@
             transition: background .3s;
         }
 
-        /* PROOF */
         .proof {
             padding: 44px 24px;
             border-bottom: 1px solid var(--border-l);
@@ -557,7 +553,6 @@
             color: var(--p);
         }
 
-        /* SECTIONS */
         .section {
             padding: 88px 24px;
         }
@@ -593,7 +588,6 @@
             max-width: 500px;
         }
 
-        /* PILLARS — grid 2x2 */
         .pillars {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -655,7 +649,6 @@
             line-height: 1.6;
         }
 
-        /* QUOTE */
         .quote-wrap {
             padding: 0 24px;
             margin-bottom: 88px;
@@ -685,7 +678,6 @@
             color: rgba(255, 255, 255, .75);
         }
 
-        /* TEMAS — grid 2x2 */
         .themes-section {
             padding: 88px 24px;
             background: var(--bg3);
@@ -782,7 +774,6 @@
             transform: scale(1.03);
         }
 
-        /* BETA */
         .beta-section {
             padding: 88px 24px;
             text-align: center;
@@ -903,7 +894,6 @@
             margin-top: 4px;
         }
 
-        /* FOOTER */
         footer {
             background: var(--text);
             padding: 36px 24px 28px;
@@ -935,7 +925,6 @@
             border-top: 1px solid rgba(255, 255, 255, .07);
         }
 
-        /* UTIL */
         .fade-in {
             opacity: 0;
             transform: translateY(18px);
@@ -995,46 +984,44 @@
 
 <body>
 
-    <!-- NAV -->
     <nav>
         <div class="nav-inner">
             <a href="#" class="nav-logo">
                 <div class="logo-icon">◈</div>
                 <div>
-                    <div class="logo-text">PM Diary</div>
-                    <div class="logo-sub">Project Manager Hub</div>
+                    <div class="logo-text" id="nav-logo-text">PM Diary</div>
+                    <div class="logo-sub" id="nav-logo-sub">Project Manager Hub</div>
                 </div>
             </a>
             <div class="nav-right">
-                <a href="#para-quien" class="nav-link">¿Para quién?</a>
-                <a href="#beta" class="nav-link">Beta</a>
-                <a href="/login.html" class="nav-cta">Solicitar acceso →</a>
+                <a href="#para-quien" class="nav-link" id="nav-link-1">¿Para quién?</a>
+                <a href="#beta" class="nav-link" id="nav-link-2">Beta</a>
+                <a href="/login.html" class="nav-cta" id="nav-cta">Solicitar acceso →</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-badge">
             <span class="hero-dot"></span>
-            Beta abierta — acceso limitado
+            <span id="hero-badge-text">Beta abierta — acceso limitado</span>
         </div>
         <h1 class="hero-title">
-            El hub que tu carrera<br />como PM
-            <span> estaba esperando</span>
+            <span id="hero-title-line1">El hub que tu carrera</span><br />
+            <span id="hero-title-line2">como PM</span>
+            <span id="hero-title-highlight"> estaba esperando</span>
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" id="hero-sub">
             Organiza tu semana, coordina tu equipo y analiza tu productividad en un solo espacio — diseñado para Project
             Managers como tú.
         </p>
         <div class="hero-actions">
-            <a href="#beta" class="btn-primary">Únete a la Beta gratuita →</a>
-            <a href="/login.html" class="btn-ghost">Iniciar sesión</a>
+            <a href="#beta" class="btn-primary" id="hero-cta-primary">Únete a la Beta gratuita →</a>
+            <a href="/login.html" class="btn-ghost" id="hero-cta-ghost">Iniciar sesión</a>
         </div>
-        <p class="hero-note">Sin tarjeta de crédito · Beta completamente gratuita · Cupos limitados</p>
+        <p class="hero-note" id="hero-note">Sin tarjeta de crédito · Beta completamente gratuita · Cupos limitados</p>
     </section>
 
-    <!-- MOCKUP -->
     <div class="mockup-wrap">
         <div class="mockup">
             <div class="mockup-bar">
@@ -1060,29 +1047,29 @@
                 </div>
                 <div class="m-main">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <div style="font-size:13px;font-weight:700;color:var(--text);transition:color .3s;">Buenos días
-                            ✦</div>
-                        <div style="font-size:9px;color:var(--text3);">3/5 completadas</div>
+                        <div style="font-size:13px;font-weight:700;color:var(--text);transition:color .3s;"
+                            id="mockup-greeting">Buenos días ✦</div>
+                        <div style="font-size:9px;color:var(--text3);" id="mockup-progress">3/5 completadas</div>
                     </div>
-                    <div class="m-banner">"Coordinaste personas, decisiones y expectativas hoy. Eso es liderazgo." ↻
-                    </div>
+                    <div class="m-banner" id="mockup-banner">"Coordinaste personas, decisiones y expectativas hoy. Eso
+                        es liderazgo." ↻</div>
                     <div class="m-stats">
                         <div class="m-stat">
-                            <div class="m-n">5</div>
-                            <div class="m-l">Total tareas</div>
+                            <div class="m-n" id="mockup-stat1-n">5</div>
+                            <div class="m-l" id="mockup-stat1-l">Total tareas</div>
                         </div>
                         <div class="m-stat">
-                            <div class="m-n">2</div>
-                            <div class="m-l">Urgentes</div>
+                            <div class="m-n" id="mockup-stat2-n">2</div>
+                            <div class="m-l" id="mockup-stat2-l">Urgentes</div>
                         </div>
                         <div class="m-stat">
-                            <div class="m-n" style="color:#34C88A;">4</div>
-                            <div class="m-l">Equipo</div>
+                            <div class="m-n" id="mockup-stat3-n" style="color:#34C88A;">4</div>
+                            <div class="m-l" id="mockup-stat3-l">Equipo</div>
                         </div>
                     </div>
                     <div class="m-chart">
-                        <div style="font-size:9px;font-weight:600;color:var(--text2);margin-bottom:4px;">Semana actual
-                        </div>
+                        <div style="font-size:9px;font-weight:600;color:var(--text2);margin-bottom:4px;"
+                            id="mockup-chart-label">Semana actual</div>
                         <div class="m-bars">
                             <div class="m-bar" style="height:40%;opacity:.7;"></div>
                             <div class="m-bar" style="height:65%;opacity:.85;"></div>
@@ -1091,10 +1078,10 @@
                             <div class="m-bar" style="height:72%;opacity:.9;"></div>
                         </div>
                         <div style="display:flex;gap:5px;margin-top:6px;">
-                            <span
+                            <span id="mockup-badge-urgent"
                                 style="padding:2px 7px;border-radius:20px;font-size:8px;font-weight:600;background:rgba(232,80,80,.1);color:#D03030;">⚠
                                 2 urgentes</span>
-                            <span
+                            <span id="mockup-badge-foda"
                                 style="padding:2px 7px;border-radius:20px;font-size:8px;font-weight:600;background:rgba(52,200,138,.1);color:#27A060;">✓
                                 FODA generado</span>
                         </div>
@@ -1104,10 +1091,9 @@
         </div>
     </div>
 
-    <!-- PROOF -->
     <div class="proof">
         <div class="proof-inner">
-            <div class="proof-lbl">Acceso anticipado activo</div>
+            <div class="proof-lbl" id="proof-label">Acceso anticipado activo</div>
             <div class="proof-avs">
                 <div class="proof-av" style="background:#E8649A;">M</div>
                 <div class="proof-av" style="background:#5682E6;">J</div>
@@ -1115,66 +1101,64 @@
                 <div class="proof-av" style="background:#F0A030;">R</div>
                 <div class="proof-av" style="background:#9664DC;">+</div>
             </div>
-            <p class="proof-txt">Project Managers de agencias digitales ya están en beta. <strong>Cupos
-                    limitados.</strong></p>
+            <p class="proof-txt"><span id="proof-text">Project Managers de agencias digitales ya están en beta.
+                </span><strong id="proof-text-strong">Cupos limitados.</strong></p>
         </div>
     </div>
 
-    <!-- PILLARS -->
     <section class="section" id="para-quien">
         <div class="s-inner">
             <div style="max-width:560px;">
-                <div class="s-tag">Diseñado para ti</div>
-                <h2 class="s-title">Para PMs que coordinan más de lo que delegan</h2>
-                <p class="s-sub">Si gestionas proyectos web, clientes, equipo técnico y diseño al mismo tiempo — PM
-                    Diary fue construido desde ese caos.</p>
+                <div class="s-tag" id="pillars-tag">Diseñado para ti</div>
+                <h2 class="s-title" id="pillars-title">Para PMs que coordinan más de lo que delegan</h2>
+                <p class="s-sub" id="pillars-sub">Si gestionas proyectos web, clientes, equipo técnico y diseño al mismo
+                    tiempo — PM Diary fue construido desde ese caos.</p>
             </div>
             <div class="pillars">
                 <div class="pillar fade-in">
-                    <div class="pillar-icon">✦</div>
-                    <div class="pillar-title">Todo en un solo lugar</div>
-                    <div class="pillar-desc">Olvida saltar entre Notion, Sheets y Trello. PM Diary concentra tu flujo de
-                        trabajo en un espacio que entiende cómo piensas como PM.</div>
+                    <div class="pillar-icon" id="pillar-0-icon">✦</div>
+                    <div class="pillar-title" id="pillar-0-title">Todo en un solo lugar</div>
+                    <div class="pillar-desc" id="pillar-0-desc">Olvida saltar entre Notion, Sheets y Trello. PM Diary
+                        concentra tu flujo de trabajo en un espacio que entiende cómo piensas como PM.</div>
                 </div>
                 <div class="pillar fade-in">
-                    <div class="pillar-icon">◎</div>
-                    <div class="pillar-title">Análisis que te conoce</div>
-                    <div class="pillar-desc">Tu dashboard entiende tu semana real y te da recomendaciones personalizadas
-                        — no datos genéricos. FODA automático incluido.</div>
+                    <div class="pillar-icon" id="pillar-1-icon">◎</div>
+                    <div class="pillar-title" id="pillar-1-title">Análisis que te conoce</div>
+                    <div class="pillar-desc" id="pillar-1-desc">Tu dashboard entiende tu semana real y te da
+                        recomendaciones personalizadas — no datos genéricos. FODA automático incluido.</div>
                 </div>
                 <div class="pillar fade-in">
-                    <div class="pillar-icon">🏆</div>
-                    <div class="pillar-title">Crece como profesional</div>
-                    <div class="pillar-desc">De Trainee PM a Directora de Proyectos. PM Diary celebra tus logros y te
-                        impulsa a subir de nivel — con XP, rachas y retos diarios.</div>
+                    <div class="pillar-icon" id="pillar-2-icon">🏆</div>
+                    <div class="pillar-title" id="pillar-2-title">Crece como profesional</div>
+                    <div class="pillar-desc" id="pillar-2-desc">De Trainee PM a Directora de Proyectos. PM Diary celebra
+                        tus logros y te impulsa a subir de nivel — con XP, rachas y retos diarios.</div>
                 </div>
                 <div class="pillar fade-in">
-                    <div class="pillar-icon">🌿</div>
-                    <div class="pillar-title">Tu bienestar también importa</div>
-                    <div class="pillar-desc">Activa el modo Vacaciones o Descanso médico cuando lo necesites. PM Diary
-                        pausa los recordatorios y guarda tu progreso intacto.</div>
+                    <div class="pillar-icon" id="pillar-3-icon">🌿</div>
+                    <div class="pillar-title" id="pillar-3-title">Tu bienestar también importa</div>
+                    <div class="pillar-desc" id="pillar-3-desc">Activa el modo Vacaciones o Descanso médico cuando lo
+                        necesites. PM Diary pausa los recordatorios y guarda tu progreso intacto.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- QUOTE -->
     <div class="quote-wrap fade-in">
         <div class="quote-box">
-            <p class="quote-text">"El trabajo de PM no siempre se ve —<br />pero sin ti, nada despega."</p>
-            <p class="quote-sub">PM Diary existe para darte el crédito que mereces y las herramientas para seguir
-                creciendo.</p>
+            <p class="quote-text" id="quote-text">"El trabajo de PM no siempre se ve —<br />pero sin ti, nada despega."
+            </p>
+            <p class="quote-sub" id="quote-sub">PM Diary existe para darte el crédito que mereces y las herramientas
+                para seguir creciendo.</p>
         </div>
     </div>
 
-    <!-- TEMAS -->
     <section class="themes-section">
         <div class="s-inner">
             <div style="max-width:540px;">
-                <div class="s-tag">Personalización</div>
-                <h2 class="s-title">Tu espacio, tu estilo</h2>
-                <p class="s-sub">Elige el tema que va con tu energía. Cambia cuando quieras — como fondo de pantalla
-                    para tu día de trabajo.</p>
+                <div class="s-tag" id="themes-tag">Personalización</div>
+                <h2 class="s-title" id="themes-title">Tu espacio, tu estilo</h2>
+                <p class="s-sub" id="themes-sub">Elige el tema que va con tu energía. Cambia cuando quieras — como fondo
+                    de pantalla para tu día de trabajo.</p>
             </div>
             <div class="themes-grid">
                 <div class="theme-card theme-card-bloom selected fade-in" id="card-bloom">
@@ -1229,14 +1213,13 @@
         </div>
     </section>
 
-    <!-- BETA -->
     <section class="beta-section" id="beta">
         <div class="beta-inner">
             <div class="beta-card fade-in">
                 <div class="beta-icon">◈</div>
-                <h2 class="beta-title">Acceso Beta gratuito</h2>
-                <p class="beta-sub">Sin tarjeta de crédito · Sin límites · Durante la beta, PM Diary es completamente
-                    gratuito. Entra, organiza y cuéntanos qué mejorar.</p>
+                <h2 class="beta-title" id="beta-title">Acceso Beta gratuito</h2>
+                <p class="beta-sub" id="beta-sub">Sin tarjeta de crédito · Sin límites · Durante la beta, PM Diary es
+                    completamente gratuito. Entra, organiza y cuéntanos qué mejorar.</p>
                 <div class="form-col" id="beta-form">
                     <input class="f-input" type="text" id="f-name" placeholder="Tu nombre" />
                     <input class="f-input" type="email" id="f-email" placeholder="Tu correo profesional" />
@@ -1248,14 +1231,16 @@
                         <option>Jefa / Especialista PM</option>
                         <option>Directora de Proyectos</option>
                     </select>
-                    <button class="f-btn" onclick="submitBeta()">Solicitar acceso →</button>
-                    <p class="f-note">O entra directamente → <a href="/login.html">Continuar con Google</a></p>
+                    <button class="f-btn" id="beta-btn" onclick="submitBeta()">Solicitar acceso →</button>
+                    <p class="f-note"><span id="beta-note-text">O entra directamente →</span> <a href="/login.html"
+                            id="beta-note-link">Continuar con Google</a></p>
                 </div>
                 <div class="success-box" id="beta-success">
                     <div class="success-icon">🎉</div>
-                    <div class="success-title">¡Solicitud enviada!</div>
-                    <div class="success-sub">Te contactamos pronto. Mientras tanto puedes entrar ahora con Google.</div>
-                    <a href="/login.html" class="f-btn"
+                    <div class="success-title" id="beta-success-title">¡Solicitud enviada!</div>
+                    <div class="success-sub" id="beta-success-sub">Te contactamos pronto. Mientras tanto puedes entrar
+                        ahora con Google.</div>
+                    <a href="/login.html" class="f-btn" id="beta-success-btn"
                         style="display:inline-block;margin-top:16px;text-decoration:none;padding:12px 24px;">Entrar
                         ahora →</a>
                 </div>
@@ -1263,16 +1248,16 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="f-inner">
-            <div class="f-logo">PM Diary</div>
-            <div class="f-sub">Project Manager Hub · Beta 2026</div>
-            <div class="f-copy">© 2026 PM Diary · Hecho con ◈ para Project Managers</div>
+            <div class="f-logo" id="footer-logo">PM Diary</div>
+            <div class="f-sub" id="footer-sub">Project Manager Hub · Beta 2026</div>
+            <div class="f-copy" id="footer-copy">© 2026 PM Diary · Hecho con ◈ para Project Managers</div>
         </div>
     </footer>
 
     <script>
+        /* ── Temas ── */
         function setTheme(name) {
             document.documentElement.setAttribute('data-theme', name);
             localStorage.setItem('pm_landing_theme', name);
@@ -1282,11 +1267,7 @@
             });
         }
 
-        // Restaurar tema guardado
-        const saved = localStorage.getItem('pm_landing_theme') || 'bloom';
-        setTheme(saved);
-
-        // Formulario
+        /* ── Formulario beta ── */
         function submitBeta() {
             const name = document.getElementById('f-name').value.trim();
             const email = document.getElementById('f-email').value.trim();
@@ -1300,12 +1281,15 @@
             document.getElementById('beta-success').style.display = 'block';
         }
 
-        // Fade in scroll
+        /* ── Fade-in scroll ── */
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: .1 });
         document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
     </script>
+
+    <!-- Carga el contenido desde content.json — edita ese archivo para cambiar textos -->
+    <script src="/content-loader.js"></script>
 </body>
 
 </html>
