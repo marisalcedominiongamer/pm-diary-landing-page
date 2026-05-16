@@ -6,10 +6,11 @@
 # ─────────────────────────────────────────────────────────────
 
 backend:
-  name: git-gateway
+  name: github
+  repo: marisalcedominiongamer/pm-diary-landing-page
   branch: main
-  identity_url: https://glittery-scone-60c317.netlify.app
-  gateway_url: https://glittery-scone-60c317.netlify.app/.netlify/git
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 # Carpeta donde se guardan las imágenes subidas desde el panel
 media_folder: images
