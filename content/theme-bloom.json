@@ -1,22 +1,15 @@
 {
-  "id": "bloom",
   "name": "Bloom",
   "emoji": "🌸",
-  "desc": "Cálido, empático y profesional",
+  "desc": "Cálido, empático y profesiona",
   "p": "#A73066",
   "pm": "#E8649A",
   "pl": "#FFB0CA",
-  "pp": "#FFD9E3",
-  "glow": "rgba(232,100,154,.13)",
   "bg": "#FFF8F8",
-  "bg2": "#FFFFFF",
   "bg3": "#FFF0F3",
-  "bg4": "#FEE9ED",
-  "border": "#DBBFC7",
-  "border_l": "#F2DDE2",
+  "hero_from": "#E8649A",
+  "hero_to": "#FFB0CA",
   "text": "#23191C",
   "text2": "#554147",
-  "text3": "#887178",
-  "hero_from": "#E8649A",
-  "hero_to": "#FFB0CA"
+  "text3": "#887178"
 }
