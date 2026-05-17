@@ -22,8 +22,12 @@ async function loadContent() {
         document.querySelector('meta[name="description"]').content = site.description;
 // Logo icon
 const logoEl = document.getElementById('logo-icon-el');
-if (site.logo_icon && logoEl) {
-  logoEl.innerHTML = `<img src="${site.logo_icon}" style="width:100%;height:100%;object-fit:contain;border-radius:6px;" alt="Logo"/>`;
+if (logoEl) {
+  if (site.logo_icon) {
+    logoEl.innerHTML = `<img src="${site.logo_icon}" style="width:100%;height:100%;object-fit:contain;border-radius:6px;" alt="Logo"/>`;
+  } else {
+    logoEl.textContent = '◈'; // ← símbolo original como fallback
+  }
 }
 
 // Favicon
