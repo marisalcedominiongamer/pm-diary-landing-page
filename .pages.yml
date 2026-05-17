@@ -132,32 +132,78 @@ content:
       - { name: sub, label: "Subtexto", type: string }
       - { name: copy, label: "Copyright", type: string }
   
- - name: themes-config
-    label: "🎨 Temas de color (administrable)"
+- name: theme-bloom
+    label: "🌸 Tema Bloom"
     type: file
-    path: content/themes-config.json
+    path: content/theme-bloom.json
     fields:
-      - name: themes
-        label: "Temas"
-        type: list
-        itemLabel: name
-        fields:
-          - { name: id,        label: "ID único (sin espacios)", type: string }
-          - { name: name,      label: "Nombre visible", type: string }
-          - { name: emoji,     label: "Emoji", type: string }
-          - { name: desc,      label: "Descripción corta", type: string }
-          - { name: p,         label: "Color primario", type: string }
-          - { name: pm,        label: "Color primario medio", type: string }
-          - { name: pl,        label: "Color primario claro", type: string }
-          - { name: pp,        label: "Color primario pálido", type: string }
-          - { name: bg,        label: "Fondo principal", type: string }
-          - { name: bg2,       label: "Fondo blanco", type: string }
-          - { name: bg3,       label: "Fondo suave", type: string }
-          - { name: hero_from, label: "Hero gradiente — inicio", type: string }
-          - { name: hero_to,   label: "Hero gradiente — fin", type: string }
-          - { name: text,      label: "Texto principal", type: string }
-          - { name: text2,     label: "Texto secundario", type: string }
-          - { name: text3,     label: "Texto terciario", type: string }
-          - { name: glow,      label: "Glow rgba", type: string }
-          - { name: border,    label: "Borde", type: string }
-          - { name: border_l,  label: "Borde claro", type: string }
+      - { name: name,      label: "Nombre", type: string }
+      - { name: emoji,     label: "Emoji", type: string }
+      - { name: desc,      label: "Descripción", type: string }
+      - { name: p,         label: "Color primario", type: string }
+      - { name: pm,        label: "Color medio", type: string }
+      - { name: pl,        label: "Color claro", type: string }
+      - { name: bg,        label: "Fondo", type: string }
+      - { name: bg3,       label: "Fondo suave", type: string }
+      - { name: hero_from, label: "Gradiente inicio", type: string }
+      - { name: hero_to,   label: "Gradiente fin", type: string }
+      - { name: text,      label: "Texto principal", type: string }
+      - { name: text2,     label: "Texto secundario", type: string }
+      - { name: text3,     label: "Texto terciario", type: string }
+
+  - name: theme-forest
+    label: "🌿 Tema Forest"
+    type: file
+    path: content/theme-forest.json
+    fields:
+      - { name: name,      label: "Nombre", type: string }
+      - { name: emoji,     label: "Emoji", type: string }
+      - { name: desc,      label: "Descripción", type: string }
+      - { name: p,         label: "Color primario", type: string }
+      - { name: pm,        label: "Color medio", type: string }
+      - { name: pl,        label: "Color claro", type: string }
+      - { name: bg,        label: "Fondo", type: string }
+      - { name: bg3,       label: "Fondo suave", type: string }
+      - { name: hero_from, label: "Gradiente inicio", type: string }
+      - { name: hero_to,   label: "Gradiente fin", type: string }
+      - { name: text,      label: "Texto principal", type: string }
+      - { name: text2,     label: "Texto secundario", type: string }
+      - { name: text3,     label: "Texto terciario", type: string }
+
+  - name: theme-aurora
+    label: "✨ Tema Aurora"
+    type: file
+    path: content/theme-aurora.json
+    fields:
+      - { name: name,      label: "Nombre", type: string }
+      - { name: emoji,     label: "Emoji", type: string }
+      - { name: desc,      label: "Descripción", type: string }
+      - { name: p,         label: "Color primario", type: string }
+      - { name: pm,        label: "Color medio", type: string }
+      - { name: pl,        label: "Color claro", type: string }
+      - { name: bg,        label: "Fondo", type: string }
+      - { name: bg3,       label: "Fondo suave", type: string }
+      - { name: hero_from, label: "Gradiente inicio", type: string }
+      - { name: hero_to,   label: "Gradiente fin", type: string }
+      - { name: text,      label: "Texto principal", type: string }
+      - { name: text2,     label: "Texto secundario", type: string }
+      - { name: text3,     label: "Texto terciario", type: string }
+
+  - name: theme-glacier
+    label: "🧊 Tema Glacier"
+    type: file
+    path: content/theme-glacier.json
+    fields:
+      - { name: name,      label: "Nombre", type: string }
+      - { name: emoji,     label: "Emoji", type: string }
+      - { name: desc,      label: "Descripción", type: string }
+      - { name: p,         label: "Color primario", type: string }
+      - { name: pm,        label: "Color medio", type: string }
+      - { name: pl,        label: "Color claro", type: string }
+      - { name: bg,        label: "Fondo", type: string }
+      - { name: bg3,       label: "Fondo suave", type: string }
+      - { name: hero_from, label: "Gradiente inicio", type: string }
+      - { name: hero_to,   label: "Gradiente fin", type: string }
+      - { name: text,      label: "Texto principal", type: string }
+      - { name: text2,     label: "Texto secundario", type: string }
+      - { name: text3,     label: "Texto terciario", type: string }

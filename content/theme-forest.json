@@ -1,0 +1,22 @@
+{
+  "id": "forest",
+  "name": "Forest",
+  "emoji": "🌿",
+  "desc": "Calma, foco y naturaleza",
+  "p": "#3A5C3A",
+  "pm": "#769476",
+  "pl": "#A8C4A8",
+  "pp": "#D4E7D7",
+  "glow": "rgba(118,148,118,.13)",
+  "bg": "#F6FBF6",
+  "bg2": "#FFFFFF",
+  "bg3": "#EEF5EE",
+  "bg4": "#E2EEE2",
+  "border": "#B8CEB8",
+  "border_l": "#D4E7D4",
+  "text": "#0F1F0F",
+  "text2": "#3A4B3F",
+  "text3": "#6A7D6A",
+  "hero_from": "#4A5D4A",
+  "hero_to": "#769476"
+}

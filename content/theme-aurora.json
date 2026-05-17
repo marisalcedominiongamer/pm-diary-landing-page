@@ -1,0 +1,22 @@
+{
+  "id": "aurora",
+  "name": "Aurora",
+  "emoji": "✨",
+  "desc": "Creativo, vibrante y expresivo",
+  "p": "#5A3D9A",
+  "pm": "#8069BF",
+  "pl": "#C9A74D",
+  "pp": "#E5DEFF",
+  "glow": "rgba(128,105,191,.13)",
+  "bg": "#FAF8FF",
+  "bg2": "#FFFFFF",
+  "bg3": "#F0EDFB",
+  "bg4": "#E5DEFF",
+  "border": "#C4B8E0",
+  "border_l": "#E0D8F5",
+  "text": "#1C1530",
+  "text2": "#47445E",
+  "text3": "#7C7296",
+  "hero_from": "#5A3D9A",
+  "hero_to": "#8069BF"
+}

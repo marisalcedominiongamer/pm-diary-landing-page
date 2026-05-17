@@ -1260,17 +1260,19 @@
 
     <script>
 
-    / * ── Temas personalizados desde JSON ── */
-    let themesData = [];
+/* ── Temas personalizados desde JSON ── */
+let themesData = [];
 
 async function loadThemesConfig() {
   try {
-    const res = await fetch('/content/themes-config.json');
-    const data = await res.json();
-    themesData = data.themes;
+    const themeIds = ['bloom', 'forest', 'aurora', 'glacier'];
+    const responses = await Promise.all(
+      themeIds.map(id => fetch(`/content/theme-${id}.json`).then(r => r.json()))
+    );
+    themesData = responses;
     renderThemeCards();
   } catch(e) {
-    console.warn('themes-config no encontrado, usando CSS vars', e);
+    console.warn('Error cargando temas:', e);
   }
 }
 

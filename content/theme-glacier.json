@@ -1,0 +1,22 @@
+{
+  "id": "glacier",
+  "name": "Glacier",
+  "emoji": "🧊",
+  "desc": "Fresco, claro y estratégico",
+  "p": "#0F172A",
+  "pm": "#0EA5E9",
+  "pl": "#7DD3FC",
+  "pp": "#F0F9FF",
+  "glow": "rgba(14,165,233,.13)",
+  "bg": "#F0F9FF",
+  "bg2": "#FFFFFF",
+  "bg3": "#E0F2FE",
+  "bg4": "#BAE6FD",
+  "border": "#93C5FD",
+  "border_l": "#BFDBFE",
+  "text": "#0F172A",
+  "text2": "#334155",
+  "text3": "#64748B",
+  "hero_from": "#0F172A",
+  "hero_to": "#0EA5E9"
+}
