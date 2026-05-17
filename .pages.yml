@@ -11,8 +11,9 @@ content:
     fields:
       - { name: title, label: "Título del sitio", type: string }
       - { name: description, label: "Descripción SEO", type: text }
-      - { name: default_theme, label: "Tema por defecto", type: select, options: { values: [bloom, forest, aurora, glacier] } }
-
+      - { name: default_theme, label: "Tema por defecto", type: select, options: { values: [bloom, forest, aurora, glacier] } }     
+      - { name: logo_icon, label: "Logo — ícono (34x34px)", type: image }
+      - { name: favicon, label: "Favicon (32x32px)", type: image }
   - name: nav
     label: "🔗 Navegación"
     type: file
@@ -130,3 +131,29 @@ content:
       - { name: logo, label: "Logo texto", type: string }
       - { name: sub, label: "Subtexto", type: string }
       - { name: copy, label: "Copyright", type: string }
+  
+  - name: themes-config
+    label: "🎨 Temas de color (administrable)"
+    type: file
+    path: content/themes-config.json
+    fields:
+      - name: themes
+        label: "Temas"
+        type: list
+        fields:
+          - { name: id,         label: "ID único (sin espacios)", type: string }
+          - { name: name,       label: "Nombre visible", type: string }
+          - { name: emoji,      label: "Emoji", type: string }
+          - { name: desc,       label: "Descripción corta", type: string }
+          - { name: p,          label: "Color primario", type: string }
+          - { name: pm,         label: "Color primario medio", type: string }
+          - { name: pl,         label: "Color primario claro", type: string }
+          - { name: pp,         label: "Color primario pálido", type: string }
+          - { name: bg,         label: "Fondo principal", type: string }
+          - { name: bg2,        label: "Fondo blanco", type: string }
+          - { name: bg3,        label: "Fondo suave", type: string }
+          - { name: hero_from,  label: "Hero gradiente — inicio", type: string }
+          - { name: hero_to,    label: "Hero gradiente — fin", type: string }
+          - { name: text,       label: "Texto principal", type: string }
+          - { name: text2,      label: "Texto secundario", type: string }
+          - { name: text3,      label: "Texto terciario", type: string }

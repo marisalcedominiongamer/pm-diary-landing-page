@@ -1,5 +1,7 @@
 {
-    "title": "PM Diary — Tu hub como Project Manager",
-    "description": "La herramienta que los Project Managers de agencias digitales estaban esperando. Beta gratuita — acceso limitado.",
-    "default_theme": "bloom"
+  "title": "PM Diary — Tu hub como Project Manager",
+  "description": "La herramienta que los Project Managers de agencias digitales estaban esperando. Beta gratuita — acceso limitado.",
+  "default_theme": "bloom",
+  "logo_icon": "/images/logo-icon.png",
+  "favicon": "/images/favicon.png"
 }

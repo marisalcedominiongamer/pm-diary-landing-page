@@ -20,7 +20,17 @@ async function loadContent() {
 
         document.title = site.title;
         document.querySelector('meta[name="description"]').content = site.description;
+// Logo icon
+const logoEl = document.getElementById('logo-icon-el');
+if (site.logo_icon && logoEl) {
+  logoEl.innerHTML = `<img src="${site.logo_icon}" style="width:100%;height:100%;object-fit:contain;border-radius:6px;" alt="Logo"/>`;
+}
 
+// Favicon
+const faviconEl = document.getElementById('favicon-link');
+if (site.favicon && faviconEl) {
+  faviconEl.href = site.favicon;
+}
         document.getElementById('nav-logo-text').textContent = nav.logo_text;
         document.getElementById('nav-logo-sub').textContent = nav.logo_sub;
         document.getElementById('nav-link-1').textContent = nav.link_1_text;

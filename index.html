@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>PM Diary — Tu hub como Project Manager</title>
+    <link rel="icon" id="favicon-link" type="image/png" href="/images/favicon.png"/>
     <meta name="description"
         content="La herramienta que los Project Managers de agencias digitales estaban esperando. Beta gratuita — acceso limitado." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -987,7 +988,7 @@
     <nav>
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="logo-icon">◈</div>
+                <div class="logo-icon" id="logo-icon-el">◈</div>
                 <div>
                     <div class="logo-text" id="nav-logo-text">PM Diary</div>
                     <div class="logo-sub" id="nav-logo-sub">Project Manager Hub</div>
@@ -1258,15 +1259,71 @@
     </footer>
 
     <script>
-        /* ── Temas ── */
-        function setTheme(name) {
-            document.documentElement.setAttribute('data-theme', name);
-            localStorage.setItem('pm_landing_theme', name);
-            ['bloom', 'forest', 'aurora', 'glacier'].forEach(t => {
-                const c = document.getElementById('card-' + t);
-                if (c) c.classList.toggle('selected', t === name);
-            });
-        }
+
+    / * ── Temas personalizados desde JSON ── */
+    let themesData = [];
+
+async function loadThemesConfig() {
+  try {
+    const res = await fetch('/content/themes-config.json');
+    const data = await res.json();
+    themesData = data.themes;
+    renderThemeCards();
+  } catch(e) {
+    console.warn('themes-config no encontrado, usando CSS vars', e);
+  }
+}
+
+function setTheme(name) {
+  const theme = themesData.find(t => t.id === name);
+  if (theme) {
+    const root = document.documentElement;
+    root.style.setProperty('--p',          theme.p);
+    root.style.setProperty('--pm',         theme.pm);
+    root.style.setProperty('--pl',         theme.pl);
+    root.style.setProperty('--pp',         theme.pp);
+    root.style.setProperty('--bg',         theme.bg);
+    root.style.setProperty('--bg2',        theme.bg2);
+    root.style.setProperty('--bg3',        theme.bg3);
+    root.style.setProperty('--hero-from',  theme.hero_from);
+    root.style.setProperty('--hero-to',    theme.hero_to);
+    root.style.setProperty('--text',       theme.text);
+    root.style.setProperty('--text2',      theme.text2);
+    root.style.setProperty('--text3',      theme.text3);
+    root.style.setProperty('--glow',       theme.glow || 'rgba(0,0,0,.08)');
+    root.style.setProperty('--border',     theme.border || '#ddd');
+    root.style.setProperty('--border-l',   theme.border_l || '#eee');
+  }
+  document.documentElement.setAttribute('data-theme', name);
+  localStorage.setItem('pm_landing_theme', name);
+  ['bloom','forest','aurora','glacier',...themesData.map(t=>t.id)].forEach(t => {
+    const c = document.getElementById('card-' + t);
+    if (c) c.classList.toggle('selected', t === name);
+  });
+}
+
+function renderThemeCards() {
+  const grid = document.querySelector('.themes-grid');
+  if (!grid || !themesData.length) return;
+  grid.innerHTML = '';
+  themesData.forEach(theme => {
+    grid.innerHTML += `
+      <div class="theme-card fade-in" id="card-${theme.id}" style="background:linear-gradient(135deg,${theme.bg3},${theme.bg4 || theme.bg});">
+        <div class="theme-card-emoji">${theme.emoji}</div>
+        <div class="theme-card-name" style="color:${theme.p};">${theme.name}</div>
+        <div class="theme-card-desc" style="color:${theme.text2};">${theme.desc}</div>
+        <div class="theme-swatches">
+          <div class="t-swatch" style="background:${theme.p};"></div>
+          <div class="t-swatch" style="background:${theme.pm};"></div>
+          <div class="t-swatch" style="background:${theme.pl};"></div>
+        </div>
+        <button class="theme-btn" style="background:${theme.pm};" onclick="setTheme('${theme.id}')">Activar ${theme.name}</button>
+      </div>`;
+  });
+  const saved = localStorage.getItem('pm_landing_theme') || 'bloom';
+  setTheme(saved);
+}
+
 
         /* ── Formulario con Sheets ── */
         const SAAS_URL = 'https://pm-diaryv1.vercel.app/login.html'; // ← cambia esto por la URL real de tu SaaS
@@ -1367,6 +1424,8 @@
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: .1 });
         document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+        loadThemesConfig();
     </script>
 
     <!-- Carga el contenido desde content.json — edita ese archivo para cambiar textos -->
