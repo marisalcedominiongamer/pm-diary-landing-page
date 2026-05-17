@@ -132,7 +132,7 @@ content:
       - { name: sub, label: "Subtexto", type: string }
       - { name: copy, label: "Copyright", type: string }
   
-- name: theme-bloom
+  - name: theme-bloom
     label: "🌸 Tema Bloom"
     type: file
     path: content/theme-bloom.json
