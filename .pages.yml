@@ -1,0 +1,132 @@
+media:
+  input: images
+  output: /images
+
+content:
+
+  - name: site
+    label: "🌐 Site — Meta y SEO"
+    type: file
+    path: content/site.json
+    fields:
+      - { name: title, label: "Título del sitio", type: string }
+      - { name: description, label: "Descripción SEO", type: text }
+      - { name: default_theme, label: "Tema por defecto", type: select, options: { values: [bloom, forest, aurora, glacier] } }
+
+  - name: nav
+    label: "🔗 Navegación"
+    type: file
+    path: content/nav.json
+    fields:
+      - { name: logo_text, label: "Logo — texto", type: string }
+      - { name: logo_sub, label: "Logo — subtexto", type: string }
+      - { name: link_1_text, label: "Enlace 1 — texto", type: string }
+      - { name: link_1_href, label: "Enlace 1 — destino", type: string }
+      - { name: link_2_text, label: "Enlace 2 — texto", type: string }
+      - { name: link_2_href, label: "Enlace 2 — destino", type: string }
+      - { name: cta_text, label: "Botón CTA — texto", type: string }
+      - { name: cta_href, label: "Botón CTA — destino", type: string }
+
+  - name: hero
+    label: "🚀 Hero — Sección principal"
+    type: file
+    path: content/hero.json
+    fields:
+      - { name: badge, label: "Badge animado", type: string }
+      - { name: title_line1, label: "Título — línea 1", type: string }
+      - { name: title_line2, label: "Título — línea 2", type: string }
+      - { name: title_highlight, label: "Título — texto degradado", type: string }
+      - { name: subtitle, label: "Subtítulo", type: text }
+      - { name: cta_primary_text, label: "Botón primario — texto", type: string }
+      - { name: cta_primary_href, label: "Botón primario — destino", type: string }
+      - { name: cta_ghost_text, label: "Botón secundario — texto", type: string }
+      - { name: cta_ghost_href, label: "Botón secundario — destino", type: string }
+      - { name: note, label: "Nota debajo de botones", type: string }
+
+  - name: mockup
+    label: "🖥️ Mockup — Dashboard"
+    type: file
+    path: content/mockup.json
+    fields:
+      - { name: greeting, label: "Saludo", type: string }
+      - { name: tasks_progress, label: "Progreso de tareas", type: string }
+      - { name: banner_quote, label: "Cita del banner", type: text }
+      - { name: stat_1_number, label: "Stat 1 — número", type: string }
+      - { name: stat_1_label, label: "Stat 1 — etiqueta", type: string }
+      - { name: stat_2_number, label: "Stat 2 — número", type: string }
+      - { name: stat_2_label, label: "Stat 2 — etiqueta", type: string }
+      - { name: stat_3_number, label: "Stat 3 — número", type: string }
+      - { name: stat_3_label, label: "Stat 3 — etiqueta", type: string }
+      - { name: chart_label, label: "Etiqueta del gráfico", type: string }
+      - { name: badge_urgent, label: "Badge urgentes", type: string }
+      - { name: badge_foda, label: "Badge FODA", type: string }
+
+  - name: proof
+    label: "👥 Social Proof"
+    type: file
+    path: content/proof.json
+    fields:
+      - { name: label, label: "Etiqueta superior", type: string }
+      - { name: text, label: "Texto principal", type: string }
+      - { name: text_strong, label: "Texto en negrita", type: string }
+
+  - name: pillars
+    label: "✦ Para quién"
+    type: file
+    path: content/pillars.json
+    fields:
+      - { name: tag, label: "Tag", type: string }
+      - { name: title, label: "Título", type: string }
+      - { name: subtitle, label: "Subtítulo", type: text }
+      - name: items
+        label: "Tarjetas (4)"
+        type: list
+        fields:
+          - { name: icon, label: "Ícono", type: string }
+          - { name: title, label: "Título", type: string }
+          - { name: desc, label: "Descripción", type: text }
+
+  - name: quote
+    label: "💬 Cita destacada"
+    type: file
+    path: content/quote.json
+    fields:
+      - { name: text, label: "Cita principal", type: text }
+      - { name: sub, label: "Subtexto", type: text }
+
+  - name: themes
+    label: "🎨 Temas — Encabezado"
+    type: file
+    path: content/themes.json
+    fields:
+      - { name: tag, label: "Tag", type: string }
+      - { name: title, label: "Título", type: string }
+      - { name: subtitle, label: "Subtítulo", type: text }
+
+  - name: beta
+    label: "⚡ Beta — Formulario"
+    type: file
+    path: content/beta.json
+    fields:
+      - { name: title, label: "Título", type: string }
+      - { name: subtitle, label: "Subtítulo", type: text }
+      - { name: placeholder_name, label: "Placeholder nombre", type: string }
+      - { name: placeholder_email, label: "Placeholder email", type: string }
+      - { name: placeholder_role, label: "Placeholder rol", type: string }
+      - { name: btn_text, label: "Texto del botón", type: string }
+      - { name: note_text, label: "Nota — texto", type: string }
+      - { name: note_link_text, label: "Nota — texto enlace", type: string }
+      - { name: note_link_href, label: "Nota — destino enlace", type: string }
+      - { name: success_title, label: "Éxito — título", type: string }
+      - { name: success_sub, label: "Éxito — subtítulo", type: text }
+      - { name: success_btn_text, label: "Éxito — botón texto", type: string }
+      - { name: success_btn_href, label: "Éxito — botón destino", type: string }
+
+  - name: footer
+    label: "🔻 Footer"
+    type: file
+    path: content/footer.json
+    fields:
+      - { name: logo, label: "Logo texto", type: string }
+      - { name: sub, label: "Subtexto", type: string }
+      - { name: copy, label: "Copyright", type: string }
