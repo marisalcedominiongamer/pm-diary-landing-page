@@ -1223,20 +1223,32 @@ async function loadThemesConfig() {
       themeIds.map(id => fetch(`/content/theme-${id}.json`).then(r => r.json()))
     );
     themesData = responses;
-    function renderThemeCards() {
-  const grid = document.getElementById('themes-grid');
-  if (!grid || !themesData.length) return;
-  grid.innerHTML = '';
-  themesData.forEach(theme => {
-    // ... resto del código
-  });
-  const saved = localStorage.getItem('pm_landing_theme') || 'bloom';
-  setTheme(saved);
-}
     renderThemeCards();
   } catch(e) {
     console.warn('Error cargando temas:', e);
   }
+}
+
+function renderThemeCards() {
+  const grid = document.getElementById('themes-grid');
+  if (!grid || !themesData.length) return;
+  grid.innerHTML = '';
+  themesData.forEach(theme => {
+    grid.innerHTML += `
+      <div class="theme-card fade-in" id="card-${theme.id}" style="background:linear-gradient(135deg,${theme.bg3},${theme.bg4 || theme.bg});">
+        <div class="theme-card-emoji">${theme.emoji}</div>
+        <div class="theme-card-name" style="color:${theme.p};">${theme.name}</div>
+        <div class="theme-card-desc" style="color:${theme.text2};">${theme.desc}</div>
+        <div class="theme-swatches">
+          <div class="t-swatch" style="background:${theme.p};"></div>
+          <div class="t-swatch" style="background:${theme.pm};"></div>
+          <div class="t-swatch" style="background:${theme.pl};"></div>
+        </div>
+        <button class="theme-btn" style="background:${theme.pm};" onclick="setTheme('${theme.id}')">Activar ${theme.name}</button>
+      </div>`;
+  });
+  const saved = localStorage.getItem('pm_landing_theme') || 'bloom';
+  setTheme(saved);
 }
 
 function setTheme(name) {
