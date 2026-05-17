@@ -1396,12 +1396,15 @@ function renderThemeCards() {
             window.location.href = SAAS_URL;
         }
 
-        /* ── Fade-in scroll ── */
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: .1 });
-        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-        loadThemesConfig();
+/* ── Fade-in scroll ── */
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: .1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+loadThemesConfig().then(() => {
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+});
     </script>
 
     <!-- Carga el contenido desde content.json — edita ese archivo para cambiar textos -->
