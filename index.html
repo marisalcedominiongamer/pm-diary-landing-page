@@ -1268,7 +1268,7 @@ function setTheme(name) {
 }
 
 function renderThemeCards() {
-  const grid = document.querySelector('.themes-grid');
+  const grid = document.getElementById('themes-grid');
   if (!grid || !themesData.length) return;
   grid.innerHTML = '';
   themesData.forEach(theme => {
