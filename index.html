@@ -1389,10 +1389,6 @@ function renderThemeCards() {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: .1 });
         document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-
-document.addEventListener('DOMContentLoaded', () => {
-  loadThemesConfig();
-});
     </script>
 
     <!-- Carga el contenido desde content.json — edita ese archivo para cambiar textos -->
