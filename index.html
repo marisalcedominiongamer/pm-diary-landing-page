@@ -1223,6 +1223,16 @@ async function loadThemesConfig() {
       themeIds.map(id => fetch(`/content/theme-${id}.json`).then(r => r.json()))
     );
     themesData = responses;
+    function renderThemeCards() {
+  const grid = document.getElementById('themes-grid');
+  if (!grid || !themesData.length) return;
+  grid.innerHTML = '';
+  themesData.forEach(theme => {
+    // ... resto del código
+  });
+  const saved = localStorage.getItem('pm_landing_theme') || 'bloom';
+  setTheme(saved);
+}
     renderThemeCards();
   } catch(e) {
     console.warn('Error cargando temas:', e);
@@ -1380,7 +1390,9 @@ function renderThemeCards() {
         }, { threshold: .1 });
         document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-        loadThemesConfig();
+document.addEventListener('DOMContentLoaded', () => {
+  loadThemesConfig();
+});
     </script>
 
     <!-- Carga el contenido desde content.json — edita ese archivo para cambiar textos -->
