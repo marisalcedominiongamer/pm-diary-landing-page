@@ -224,6 +224,7 @@
         }
 
         .hero-badge {
+            span { color: #0369a1; } /* azul más oscuro */
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -336,7 +337,7 @@
 
         .hero-note {
             font-size: 12px;
-            color: var(--text3);
+            color: #475569; /* gris más oscuro */
         }
 
         .mockup-wrap {
@@ -566,7 +567,7 @@
         .s-tag {
             font-size: 11px;
             font-weight: 700;
-            color: var(--pm);
+            color: #0369a1; /* en lugar del #0ea5e9 actual */
             text-transform: uppercase;
             letter-spacing: .8px;
             margin-bottom: 10px;
@@ -898,6 +899,8 @@
         footer {
             background: var(--text);
             padding: 36px 24px 28px;
+            #footer-sub { color: #94a3b8; }
+            #footer-copy { color: #94a3b8; }
         }
 
         .f-inner {
@@ -984,7 +987,7 @@
 </head>
 
 <body>
-
+<main>
     <nav>
         <div class="nav-inner">
             <a href="#" class="nav-logo">
@@ -1001,7 +1004,7 @@
             </div>
         </div>
     </nav>
-
+</main>
     <section class="hero">
         <div class="hero-badge">
             <span class="hero-dot"></span>
@@ -1202,7 +1205,7 @@
             </div>
         </div>
     </section>
-
+<main>
     <footer>
         <div class="f-inner">
             <div class="f-logo" id="footer-logo">PM Diary</div>
@@ -1210,7 +1213,7 @@
             <div class="f-copy" id="footer-copy">© 2026 PM Diary · Hecho con ◈ para Project Managers</div>
         </div>
     </footer>
-
+</main>
     <script>
 
 /* ── Temas personalizados desde JSON ── */
