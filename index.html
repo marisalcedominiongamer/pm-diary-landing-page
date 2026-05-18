@@ -516,7 +516,7 @@
         .proof-lbl {
             font-size: 10px;
             font-weight: 700;
-            color: var(--text3);
+            color: #475569;
             text-transform: uppercase;
             letter-spacing: .8px;
             margin-bottom: 14px;
@@ -588,6 +588,17 @@
             color: var(--text2);
             line-height: 1.65;
             max-width: 500px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
         }
 
         .pillars {
@@ -1180,6 +1191,8 @@
                 <div class="form-col" id="beta-form">
                     <input class="f-input" type="text" id="f-name" placeholder="Tu nombre" />
                     <input class="f-input" type="email" id="f-email" placeholder="Tu correo profesional" />
+                    <input class="f-input" type="email" id="f-email" placeholder="Tu correo profesional" />
+                    <label for="f-role" class="sr-only">Tu nivel actual como PM</label>
                     <select class="f-input" id="f-role" style="cursor:pointer;">
                         <option value="" disabled selected>Tu nivel actual como PM</option>
                         <option>Trainee / Practicante PM</option>
