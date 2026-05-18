@@ -100,9 +100,9 @@ GOOGLE_SERVICE_ACCOUNT_JSON=...
 
 | Métrica | Desktop | Mobile |
 |---------|---------|--------|
-| Performance | 100 | 90 |
-| Accessibility | 83 | 83 |
-| Best Practices | 81 | 81 |
+| Performance | 100 | 97 |
+| Accessibility | 100 | 93 |
+| Best Practices | 100 | 100 |
 | SEO | 100 | 100 |
 
 ---
